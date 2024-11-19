@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const Copy = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" {...props}><g stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.167} clipPath="url(#prefix__a)"><path d="M11.667 4.667H5.833c-.644 0-1.166.522-1.166 1.166v5.834c0 .644.522 1.166 1.166 1.166h5.834c.644 0 1.166-.522 1.166-1.166V5.833c0-.644-.522-1.166-1.166-1.166" /><path d="M2.333 9.333a1.17 1.17 0 0 1-1.166-1.166V2.333a1.17 1.17 0 0 1 1.166-1.166h5.834a1.17 1.17 0 0 1 1.166 1.166" /></g><defs><clipPath id="prefix__a"><path fill="#fff" d="M0 0h14v14H0z" /></clipPath></defs></svg>;
+export default Copy;

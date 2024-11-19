@@ -1,4 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const ChevronLeft = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" {...props}><path stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.333} d="M10 12 6 8l4-4" /></svg>;
-export default ChevronLeft;
+const Chevronleft = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" {...props}><path stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.167} d="M8.75 10.5 5.25 7l3.5-3.5" /></svg>;
+export default Chevronleft;

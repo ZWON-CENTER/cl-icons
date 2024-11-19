@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const Phone = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" {...props}><g clipPath="url(#prefix__a)"><path stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.167} d="M12.833 9.863v1.75a1.165 1.165 0 0 1-1.271 1.167 11.54 11.54 0 0 1-5.035-1.791 11.4 11.4 0 0 1-3.5-3.5 11.54 11.54 0 0 1-1.79-5.058 1.167 1.167 0 0 1 1.16-1.272h1.75a1.17 1.17 0 0 1 1.167 1.004c.074.56.21 1.11.408 1.639a1.17 1.17 0 0 1-.262 1.23l-.74.742a9.33 9.33 0 0 0 3.5 3.5l.74-.741a1.17 1.17 0 0 1 1.23-.263c.53.198 1.08.335 1.64.409a1.166 1.166 0 0 1 1.003 1.184" /></g><defs><clipPath id="prefix__a"><path fill="#fff" d="M0 0h14v14H0z" /></clipPath></defs></svg>;
+export default Phone;

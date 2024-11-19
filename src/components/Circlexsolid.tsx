@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const Circlexsolid = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" {...props}><g clipPath="url(#prefix__a)"><path fill="#ACB4BD" fillRule="evenodd" d="M.583 7a6.417 6.417 0 1 1 12.834 0A6.417 6.417 0 0 1 .583 7" clipRule="evenodd" /><path fill="#fff" d="M9.162 4.837a.583.583 0 0 1 0 .825L7.825 7l1.337 1.337a.583.583 0 1 1-.824.825L7 7.825 5.662 9.162a.583.583 0 0 1-.824-.825L6.175 7 4.838 5.662a.583.583 0 1 1 .824-.825L7 6.175l1.338-1.338a.583.583 0 0 1 .824 0" /></g><defs><clipPath id="prefix__a"><path fill="#fff" d="M0 0h14v14H0z" /></clipPath></defs></svg>;
+export default Circlexsolid;

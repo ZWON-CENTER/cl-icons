@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const Pencil = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" {...props}><g stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.167} clipPath="url(#prefix__a)"><path d="M12.352 3.974a1.645 1.645 0 0 0-2.326-2.326L2.241 9.435a1.2 1.2 0 0 0-.291.484l-.771 2.539a.292.292 0 0 0 .363.363l2.54-.77c.182-.056.349-.156.484-.29zM8.75 2.917l2.333 2.333" /></g><defs><clipPath id="prefix__a"><path fill="#fff" d="M0 0h14v14H0z" /></clipPath></defs></svg>;
+export default Pencil;

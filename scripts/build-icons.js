@@ -8,7 +8,7 @@ const distDir = path.join(__dirname, "..", "dist");
 const jsonOutputPath = path.join(distDir, "icon-list.json");
 
 // Ensure the output directories exist
-[outputDir, distDir].forEach(dir => {
+[outputDir, distDir].forEach((dir) => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
@@ -22,13 +22,24 @@ const svgFiles = fs
 // Array to store icon information
 const iconList = [];
 
+// Function to sanitize component names
+function sanitizeComponentName(name) {
+  // Remove file extension and non-alphanumeric characters, then capitalize
+  let sanitized = name
+    .replace(".svg", "")
+    .replace(/[^a-zA-Z0-9]/g, "")
+    .replace(/^(\d)/, "_$1") // Prefix with underscore if it starts with a number
+    .replace(/^\s+|\s+$/g, ""); // Trim whitespace
+
+  // Capitalize the first letter
+  sanitized = sanitized.charAt(0).toUpperCase() + sanitized.slice(1);
+
+  return sanitized;
+}
+
 // Convert SVG to React components and collect icon information
 svgFiles.forEach((file) => {
-  const componentName = file
-    .replace(".svg", "")
-    .split("-")
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join("");
+  const componentName = sanitizeComponentName(file);
   const svgCode = fs.readFileSync(path.join(iconsDir, file), "utf8");
 
   // Extract path data from SVG
@@ -38,7 +49,8 @@ svgFiles.forEach((file) => {
   // Add icon information to the list
   iconList.push({
     name: componentName,
-    path: pathData
+    originalName: file.replace(".svg", ""),
+    path: pathData,
   });
 
   transform(
@@ -49,8 +61,10 @@ svgFiles.forEach((file) => {
       dimensions: false,
       icon: true,
     },
-    { componentName }
+    { componentName },
   ).then((jsCode) => {
+    // Ensure proper spacing in the export statement
+    jsCode = jsCode.replace(/export default (\w+)/, "export default $1");
     fs.writeFileSync(path.join(outputDir, `${componentName}.tsx`), jsCode);
   });
 });
@@ -58,11 +72,7 @@ svgFiles.forEach((file) => {
 // Generate index.ts file
 const indexContent = svgFiles
   .map((file) => {
-    const componentName = file
-      .replace(".svg", "")
-      .split("-")
-      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-      .join("");
+    const componentName = sanitizeComponentName(file);
     return `export { default as ${componentName} } from './components/${componentName}';`;
   })
   .join("\n");
@@ -72,4 +82,6 @@ fs.writeFileSync(path.join(__dirname, "..", "src", "index.ts"), indexContent);
 // Generate JSON file with icon list in dist directory
 fs.writeFileSync(jsonOutputPath, JSON.stringify({ icons: iconList }, null, 2));
 
-console.log("Icon components, index.ts, and icon-list.json generated successfully!");
+console.log(
+  "Icon components, index.ts, and icon-list.json generated successfully!",
+);

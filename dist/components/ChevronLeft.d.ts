@@ -1,4 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-declare const ChevronLeft: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
-export default ChevronLeft;
+declare const Chevronleft: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
+export default Chevronleft;
