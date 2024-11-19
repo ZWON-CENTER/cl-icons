@@ -67,7 +67,11 @@ var ChevronRight = function (props) { return React__namespace.createElement("svg
 var ChevronUp = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 16 16" }, props),
     React__namespace.createElement("path", { stroke: "#ACB4BD", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.333, d: "M12 10 8 6l-4 4" })); };
 
+var Search = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 24 24" }, props),
+    React__namespace.createElement("path", { stroke: "#ACB4BD", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.3-4.3" })); };
+
 exports.ChevronDown = ChevronDown;
 exports.ChevronLeft = ChevronLeft;
 exports.ChevronRight = ChevronRight;
 exports.ChevronUp = ChevronUp;
+exports.Search = Search;
