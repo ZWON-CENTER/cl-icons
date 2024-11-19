@@ -38,8 +38,11 @@ function sanitizeComponentName(name) {
 }
 
 // Convert SVG to React components and collect icon information
+// Convert SVG to React components and collect icon information
 svgFiles.forEach((file) => {
+  console.log("Processing file:", file);
   const componentName = sanitizeComponentName(file);
+  console.log("Component name:", componentName);
   const svgCode = fs.readFileSync(path.join(iconsDir, file), "utf8");
 
   // Extract path data from SVG
@@ -47,11 +50,15 @@ svgFiles.forEach((file) => {
   const pathData = pathMatch ? pathMatch[1] : "";
 
   // Add icon information to the list
-  iconList.push({
+  const iconInfo = {
     name: componentName,
-    originalName: file.replace(".svg", ""),
+    originalName: path.basename(file, '.svg')
+      .replace(/[^a-zA-Z0-9-]/g, '') // 특수문자 제거
+      .toLowerCase(),
     path: pathData,
-  });
+  };
+  console.log("Icon info:", iconInfo);
+  iconList.push(iconInfo);
 
   transform(
     svgCode,
