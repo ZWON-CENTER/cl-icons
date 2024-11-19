@@ -84,12 +84,15 @@ transform(
   },
   { componentName },
 ).then((jsCode) => {
-  // Modify the component to accept a color prop
   jsCode = jsCode.replace(
-    'const SvgComponent = (props: SVGProps<SVGSVGElement>) => (',
-    'const SvgComponent = ({ color = "currentColor", ...props }: SVGProps<SVGSVGElement> & { color?: string }) => ('
+    /const \w+ = \(props: SVGProps<SVGSVGElement>\)/,
+    `const ${componentName} = (props: SVGProps<SVGSVGElement> & { color?: string })`
   );
-  jsCode = jsCode.replace('<svg', '<svg fill={color} stroke={color}');
+
+  jsCode = jsCode.replace(
+    /<svg/,
+    '<svg width={props.width} height={props.height} stroke={props.color || "#ACB4BD"} fill="none"'
+  );
 
   // Ensure proper spacing in the export statement
   jsCode = jsCode.replace(/export default (\w+)/, "export default $1");
