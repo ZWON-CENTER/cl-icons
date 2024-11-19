@@ -1,0 +1,20 @@
+{
+  "icons": [
+    {
+      "name": "AngleDown",
+      "path": "M4 6L8 10L12 6"
+    },
+    {
+      "name": "AngleLeft",
+      "path": ""
+    },
+    {
+      "name": "AngleRight",
+      "path": ""
+    },
+    {
+      "name": "AngleUp",
+      "path": ""
+    }
+  ]
+}

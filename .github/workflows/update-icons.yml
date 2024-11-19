@@ -1,0 +1,26 @@
+name: Update Icons
+
+on:
+  push:
+    paths:
+      - 'icons/**'
+
+jobs:
+  update-icons:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Generate index file
+        run: node scripts/generate-index.js
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add src/
+          git commit -m "Update icon components" || echo "No changes to commit"
+          git push

@@ -1,0 +1,20 @@
+{
+  "icons": [
+    {
+      "name": "ChevronDown",
+      "path": "M4 6L8 10L12 6"
+    },
+    {
+      "name": "ChevronLeft",
+      "path": "M10 12L6 8L10 4"
+    },
+    {
+      "name": "ChevronRight",
+      "path": "M6 12L10 8L6 4"
+    },
+    {
+      "name": "ChevronUp",
+      "path": "M12 10L8 6L4 10"
+    }
+  ]
+}
