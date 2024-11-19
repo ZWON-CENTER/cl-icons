@@ -1,4 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const LogOut = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" {...props}><path stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.167} d="M5.25 12.25H2.917a1.167 1.167 0 0 1-1.167-1.167V2.917A1.167 1.167 0 0 1 2.917 1.75H5.25M9.333 9.917 12.25 7 9.333 4.083M12.25 7h-7" /></svg>;
+const LogOut = (props: SVGProps<SVGSVGElement>) => <svg fill={color} stroke={color} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" {...props}><path d="M5.25 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V2.91667C1.75 2.60725 1.87292 2.3105 2.09171 2.09171C2.3105 1.87292 2.60725 1.75 2.91667 1.75H5.25" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /><path d="M9.33332 9.91671L12.25 7.00004L9.33332 4.08337" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /><path d="M12.25 7H5.25" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /></svg>;
 export default LogOut;

@@ -1,4 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const Search = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" {...props}><path stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.167} d="M6.417 11.083a4.667 4.667 0 1 0 0-9.333 4.667 4.667 0 0 0 0 9.333M12.25 12.25 9.742 9.742" /></svg>;
+const Search = (props: SVGProps<SVGSVGElement>) => <svg fill={color} stroke={color} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" {...props}><path d="M6.41667 11.0833C8.994 11.0833 11.0833 8.994 11.0833 6.41667C11.0833 3.83934 8.994 1.75 6.41667 1.75C3.83934 1.75 1.75 3.83934 1.75 6.41667C1.75 8.994 3.83934 11.0833 6.41667 11.0833Z" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /><path d="M12.25 12.2499L9.74168 9.74158" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /></svg>;
 export default Search;

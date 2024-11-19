@@ -66,20 +66,35 @@ svgFiles.forEach((file) => {
   console.log("Icon info:", iconInfo);
   iconList.push(iconInfo);
 
-  transform(
-    svgCode,
-    {
-      plugins: ["@svgr/plugin-svgo", "@svgr/plugin-jsx"],
-      typescript: true,
-      dimensions: false,
-      icon: true,
-    },
-    { componentName },
-  ).then((jsCode) => {
-    // Ensure proper spacing in the export statement
-    jsCode = jsCode.replace(/export default (\w+)/, "export default $1");
-    fs.writeFileSync(path.join(outputDir, `${componentName}.tsx`), jsCode);
-  });
+transform(
+  svgCode,
+  {
+    plugins: ["@svgr/plugin-svgo", "@svgr/plugin-jsx"],
+    typescript: true,
+    dimensions: false,
+    icon: true,
+    svgoConfig: {
+      plugins: [
+        {
+          name: 'removeAttrs',
+          params: { attrs: '(fill|stroke)' }
+        }
+      ]
+    }
+  },
+  { componentName },
+).then((jsCode) => {
+  // Modify the component to accept a color prop
+  jsCode = jsCode.replace(
+    'const SvgComponent = (props: SVGProps<SVGSVGElement>) => (',
+    'const SvgComponent = ({ color = "currentColor", ...props }: SVGProps<SVGSVGElement> & { color?: string }) => ('
+  );
+  jsCode = jsCode.replace('<svg', '<svg fill={color} stroke={color}');
+
+  // Ensure proper spacing in the export statement
+  jsCode = jsCode.replace(/export default (\w+)/, "export default $1");
+  fs.writeFileSync(path.join(outputDir, `${componentName}.tsx`), jsCode);
+});
 });
 
 // Generate index.ts file

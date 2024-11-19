@@ -1,4 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const Upload = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" {...props}><path stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.167} d="M12.25 8.75v2.333a1.167 1.167 0 0 1-1.167 1.167H2.917a1.167 1.167 0 0 1-1.167-1.167V8.75M9.917 4.667 7 1.75 4.083 4.667M7 1.75v7" /></svg>;
+const Upload = (props: SVGProps<SVGSVGElement>) => <svg fill={color} stroke={color} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" {...props}><path d="M12.25 8.75V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H2.91667C2.60725 12.25 2.3105 12.1271 2.09171 11.9083C1.87292 11.6895 1.75 11.3928 1.75 11.0833V8.75" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /><path d="M9.91665 4.66667L6.99998 1.75L4.08331 4.66667" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /><path d="M7 1.75V8.75" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /></svg>;
 export default Upload;
