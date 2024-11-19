@@ -1,4 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-declare const Penline: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
-export default Penline;
+declare const PenLine: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
+export default PenLine;

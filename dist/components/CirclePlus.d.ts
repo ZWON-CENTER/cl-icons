@@ -1,4 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-declare const Circleplus: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
-export default Circleplus;
+declare const CirclePlus: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
+export default CirclePlus;

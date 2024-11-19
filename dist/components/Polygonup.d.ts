@@ -1,4 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-declare const Polygonup: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
-export default Polygonup;
+declare const PolygonUp: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
+export default PolygonUp;

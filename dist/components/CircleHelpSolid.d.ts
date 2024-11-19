@@ -1,4 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-declare const Circlehelpsolid: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
-export default Circlehelpsolid;
+declare const CircleHelpSolid: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
+export default CircleHelpSolid;

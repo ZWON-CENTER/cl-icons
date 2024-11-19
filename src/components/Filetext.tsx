@@ -1,4 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const Filetext = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" {...props}><path stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.167} d="M8.75 1.167H3.5a1.167 1.167 0 0 0-1.167 1.166v9.334A1.167 1.167 0 0 0 3.5 12.833h7a1.166 1.166 0 0 0 1.167-1.166V4.083z" /><path stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.167} d="M8.167 1.167V3.5a1.167 1.167 0 0 0 1.166 1.167h2.334M5.833 5.25H4.667M9.333 7.583H4.667M9.333 9.917H4.667" /></svg>;
-export default Filetext;
+const FileText = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" {...props}><path stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.167} d="M8.75 1.167H3.5a1.167 1.167 0 0 0-1.167 1.166v9.334A1.167 1.167 0 0 0 3.5 12.833h7a1.166 1.166 0 0 0 1.167-1.166V4.083z" /><path stroke="#ACB4BD" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.167} d="M8.167 1.167V3.5a1.167 1.167 0 0 0 1.166 1.167h2.334M5.833 5.25H4.667M9.333 7.583H4.667M9.333 9.917H4.667" /></svg>;
+export default FileText;

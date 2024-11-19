@@ -22,22 +22,28 @@ const svgFiles = fs
 // Array to store icon information
 const iconList = [];
 
-// Function to sanitize component names
+// Updated function to sanitize component names
 function sanitizeComponentName(name) {
-  // Remove file extension and non-alphanumeric characters, then capitalize
-  let sanitized = name
-    .replace(".svg", "")
-    .replace(/[^a-zA-Z0-9]/g, "")
-    .replace(/^(\d)/, "_$1") // Prefix with underscore if it starts with a number
-    .replace(/^\s+|\s+$/g, ""); // Trim whitespace
+  // Remove file extension
+  let sanitized = name.replace(".svg", "");
 
-  // Capitalize the first letter
-  sanitized = sanitized.charAt(0).toUpperCase() + sanitized.slice(1);
+  // Split the name by non-alphanumeric characters
+  let parts = sanitized.split(/[^a-zA-Z0-9]+/);
+
+  // Capitalize each part and join them
+  sanitized = parts.map(part => {
+    // Capitalize the first letter of each part
+    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+  }).join("");
+
+  // Ensure the name starts with a letter
+  if (/^[0-9]/.test(sanitized)) {
+    sanitized = "_" + sanitized;
+  }
 
   return sanitized;
 }
 
-// Convert SVG to React components and collect icon information
 // Convert SVG to React components and collect icon information
 svgFiles.forEach((file) => {
   console.log("Processing file:", file);
@@ -53,7 +59,7 @@ svgFiles.forEach((file) => {
   const iconInfo = {
     name: componentName,
     originalName: path.basename(file, '.svg')
-      .replace(/[^a-zA-Z0-9-]/g, '') // 특수문자 제거
+      .replace(/[^a-zA-Z0-9-]/g, '') // Remove special characters
       .toLowerCase(),
     path: pathData,
   };

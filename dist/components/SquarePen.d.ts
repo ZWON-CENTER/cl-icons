@@ -1,4 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-declare const Squarepen: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
-export default Squarepen;
+declare const SquarePen: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
+export default SquarePen;
