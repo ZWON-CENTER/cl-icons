@@ -1,6 +1,4 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-declare const CircleHelpSolid: (props: SVGProps<SVGSVGElement> & {
-    color?: string;
-}) => React.JSX.Element;
+declare const CircleHelpSolid: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
 export default CircleHelpSolid;

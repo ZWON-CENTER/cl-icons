@@ -77,7 +77,7 @@ transform(
       plugins: [
         {
           name: 'removeAttrs',
-          params: { attrs: '(fill|stroke)' }
+          params: { attrs: '(stroke|fill|width|height)' }
         }
       ]
     }
@@ -85,13 +85,37 @@ transform(
   { componentName },
 ).then((jsCode) => {
   jsCode = jsCode.replace(
-    /const \w+ = \(props: SVGProps<SVGSVGElement>\)/,
-    `const ${componentName} = (props: SVGProps<SVGSVGElement> & { color?: string })`
+    /const \w+ = $$props: SVGProps<SVGSVGElement>$$/,
+    `const ${componentName} = (props: SVGProps<SVGSVGElement> & { color?: string; fill?: string })`
   );
 
+  if (svgCode.includes('fill-rule="evenodd"') || svgCode.includes('fillRule="evenodd"')) {
+    jsCode = jsCode.replace(
+      /<svg([^>]*?)>/,
+      '<svg $1>'
+    );
+
+    jsCode = jsCode.replace(
+      /<path([^>]*?)fill=["'][^"']*["']/g,
+      (match, attributes) => {
+        if (attributes.includes('fillRule="evenodd"') || attributes.includes('fill-rule="evenodd"')) {
+          return match.replace(/fill=["'][^"']*["']/, 'fill={props.fill || "#ACB4BD"}');
+        } else {
+          return match.replace(/fill=["'][^"']*["']/, 'fill={props.color || "#ACB4BD"}');
+        }
+      }
+    );
+  } else {
+    jsCode = jsCode.replace(
+      /<svg([^>]*?)>/,
+      '<svg stroke={props.color || "#ACB4BD"} fill="none" $1>'
+    );
+  }
+
+  // Add width and height props to the svg element
   jsCode = jsCode.replace(
     /<svg/,
-    '<svg width={props.width} height={props.height} stroke={props.color || "#ACB4BD"} fill="none"'
+    '<svg width={props.width} height={props.height}'
   );
 
   // Ensure proper spacing in the export statement

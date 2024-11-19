@@ -73,14 +73,14 @@ var ChevronRight = function (props) { return React.createElement("svg", __assign
 var ChevronUp = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("path", { d: "M10.5 8.75L7 5.25L3.5 8.75", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })); };
 
-var CircleHelpSolid = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
+var CircleHelpSolid = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("g", { clipPath: "url(#clip0_2197_5969)" },
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M0.583321 7.00004C0.583321 3.45621 3.45616 0.583374 6.99999 0.583374C10.5438 0.583374 13.4167 3.45621 13.4167 7.00004C13.4167 10.5439 10.5438 13.4167 6.99999 13.4167C3.45616 13.4167 0.583321 10.5439 0.583321 7.00004Z" }),
         React.createElement("path", { d: "M6.36221 4.82495C6.59975 4.68535 6.87902 4.63432 7.15058 4.6809C7.42213 4.72748 7.66844 4.86866 7.84587 5.07944C8.02331 5.29022 8.12042 5.55786 8.12001 5.83338C8.12001 6.10704 7.90703 6.39234 7.50477 6.66052C7.32139 6.78277 7.13385 6.87696 6.98987 6.94095C6.9187 6.97258 6.86021 6.99594 6.82087 7.01092C6.51563 7.11303 6.29813 7.46242 6.39994 7.76785C6.50182 8.07348 6.83218 8.23866 7.13781 8.13678C7.13781 8.13678 7.20797 8.11191 7.2362 8.10116C7.29257 8.07968 7.3708 8.04835 7.46369 8.00706C7.64783 7.92522 7.8978 7.80066 8.15192 7.63125C8.62456 7.31615 9.28641 6.72662 9.28668 5.83391C9.28742 5.283 9.0932 4.74958 8.7384 4.32811C8.38353 3.90655 7.89092 3.62418 7.34781 3.53103C6.8047 3.43787 6.24615 3.53993 5.77108 3.81913C5.29602 4.09833 4.93509 4.53666 4.75223 5.05647C4.64532 5.36038 4.80502 5.69342 5.10893 5.80033C5.41284 5.90724 5.74588 5.74753 5.85279 5.44362C5.94422 5.18372 6.12468 4.96455 6.36221 4.82495Z" }),
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M6.41668 9.91659C6.41668 9.59442 6.67785 9.33325 7.00001 9.33325C7.32218 9.33325 7.58918 9.59442 7.58918 9.91659C7.58918 10.2388 7.32218 10.4999 7.00001 10.4999C6.67785 10.4999 6.41668 10.2388 6.41668 9.91659Z" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5969" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
 var CircleHelp = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("g", { clipPath: "url(#clip0_2197_5965)" },
@@ -89,15 +89,15 @@ var CircleHelp = function (props) { return React.createElement("svg", __assign({
         React.createElement("path", { d: "M7 9.91675H7.00667", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5965" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
-var CirclePlusSolid = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
+var CirclePlusSolid = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("g", { clipPath: "url(#clip0_2197_5959)" },
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M0.583319 7.00004C0.583319 3.45621 3.45616 0.583374 6.99999 0.583374C10.5438 0.583374 13.4167 3.45621 13.4167 7.00004C13.4167 10.5439 10.5438 13.4167 6.99999 13.4167C3.45616 13.4167 0.583319 10.5439 0.583319 7.00004Z" }),
         React.createElement("path", { d: "M4.66665 6.41671C4.34449 6.41671 4.08332 6.67787 4.08332 7.00004C4.08332 7.32221 4.34449 7.58337 4.66665 7.58337H6.41665V9.33337C6.41665 9.65554 6.67782 9.91671 6.99999 9.91671C7.32215 9.91671 7.58332 9.65554 7.58332 9.33337V7.58337H9.33332C9.65548 7.58337 9.91665 7.32221 9.91665 7.00004C9.91665 6.67787 9.65548 6.41671 9.33332 6.41671H7.58332V4.66671C7.58332 4.34454 7.32215 4.08337 6.99999 4.08337C6.67782 4.08337 6.41665 4.34454 6.41665 4.66671V6.41671H4.66665Z" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5959" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
 var CirclePlus = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("g", { clipPath: "url(#clip0_2197_5955)" },
@@ -106,15 +106,15 @@ var CirclePlus = function (props) { return React.createElement("svg", __assign({
         React.createElement("path", { d: "M7 4.66663V9.33329", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5955" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
-var CircleXSolid = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
+var CircleXSolid = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("g", { clipPath: "url(#clip0_2197_5952)" },
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M0.583319 7.00004C0.583319 3.45621 3.45616 0.583374 6.99999 0.583374C10.5438 0.583374 13.4167 3.45621 13.4167 7.00004C13.4167 10.5439 10.5438 13.4167 6.99999 13.4167C3.45616 13.4167 0.583319 10.5439 0.583319 7.00004Z" }),
         React.createElement("path", { d: "M9.16249 4.83748C9.3903 5.06529 9.3903 5.43463 9.16249 5.66244L7.82497 6.99996L9.16249 8.33748C9.3903 8.56529 9.3903 8.93463 9.16249 9.16244C8.93469 9.39024 8.56534 9.39024 8.33754 9.16244L7.00001 7.82492L5.66249 9.16244C5.43469 9.39024 5.06534 9.39024 4.83754 9.16244C4.60973 8.93463 4.60973 8.56529 4.83754 8.33748L6.17506 6.99996L4.83754 5.66244C4.60973 5.43463 4.60973 5.06529 4.83754 4.83748C5.06534 4.60967 5.43469 4.60967 5.66249 4.83748L7.00001 6.175L8.33754 4.83748C8.56534 4.60967 8.93469 4.60967 9.16249 4.83748Z" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5952" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
 var CircleX = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("g", { clipPath: "url(#clip0_2197_5948)" },
@@ -123,7 +123,7 @@ var CircleX = function (props) { return React.createElement("svg", __assign({ wi
         React.createElement("path", { d: "M5.25 5.25L8.75 8.75", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5948" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
 var Clock = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("g", { clipPath: "url(#clip0_2197_5982)" },
@@ -131,7 +131,7 @@ var Clock = function (props) { return React.createElement("svg", __assign({ widt
         React.createElement("path", { d: "M7 3.5V7H9.625", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5982" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
 var Copy = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("g", { clipPath: "url(#clip0_2197_5836)" },
@@ -139,7 +139,7 @@ var Copy = function (props) { return React.createElement("svg", __assign({ width
         React.createElement("path", { d: "M2.33335 9.33329C1.69168 9.33329 1.16668 8.80829 1.16668 8.16663V2.33329C1.16668 1.69163 1.69168 1.16663 2.33335 1.16663H8.16668C8.80835 1.16663 9.33335 1.69163 9.33335 2.33329", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5836" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
 var CornerDownRight = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("path", { d: "M8.75 5.83337L11.6667 8.75004L8.75 11.6667", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" }),
@@ -181,14 +181,14 @@ var Image = function (props) { return React.createElement("svg", __assign({ widt
     React.createElement("path", { d: "M5.24998 6.41671C5.89431 6.41671 6.41665 5.89437 6.41665 5.25004C6.41665 4.60571 5.89431 4.08337 5.24998 4.08337C4.60565 4.08337 4.08331 4.60571 4.08331 5.25004C4.08331 5.89437 4.60565 6.41671 5.24998 6.41671Z", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" }),
     React.createElement("path", { d: "M12.25 8.7499L10.4498 6.94974C10.2311 6.73102 9.93436 6.60815 9.625 6.60815C9.31564 6.60815 9.01895 6.73102 8.80017 6.94974L3.5 12.2499", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })); };
 
-var InfoSolid = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
+var InfoSolid = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("g", { clipPath: "url(#clip0_2197_5938)" },
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M0.583321 7.00004C0.583321 3.45621 3.45616 0.583374 6.99999 0.583374C10.5438 0.583374 13.4167 3.45621 13.4167 7.00004C13.4167 10.5439 10.5438 13.4167 6.99999 13.4167C3.45616 13.4167 0.583321 10.5439 0.583321 7.00004Z" }),
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M7.00001 6.41663C7.32218 6.41663 7.58335 6.67779 7.58335 6.99996V9.33329C7.58335 9.65546 7.32218 9.91663 7.00001 9.91663C6.67785 9.91663 6.41668 9.65546 6.41668 9.33329V6.99996C6.41668 6.67779 6.67785 6.41663 7.00001 6.41663Z" }),
         React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M6.41668 4.66671C6.41668 4.34454 6.67785 4.08337 7.00001 4.08337C7.32218 4.08337 7.58918 4.34454 7.58918 4.66671C7.58918 4.98887 7.32218 5.25004 7.00001 5.25004C6.67785 5.25004 6.41668 4.98887 6.41668 4.66671Z" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5938" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
 var Info = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("g", { clipPath: "url(#clip0_2197_5934)" },
@@ -197,7 +197,7 @@ var Info = function (props) { return React.createElement("svg", __assign({ width
         React.createElement("path", { d: "M7 4.66663H7.00667", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5934" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
 var LogIn = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("path", { d: "M8.75 1.75H11.0833C11.3928 1.75 11.6895 1.87292 11.9083 2.09171C12.1271 2.3105 12.25 2.60725 12.25 2.91667V11.0833C12.25 11.3928 12.1271 11.6895 11.9083 11.9083C11.6895 12.1271 11.3928 12.25 11.0833 12.25H8.75", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" }),
@@ -213,7 +213,7 @@ var MapPin = function (props) { return React.createElement("svg", __assign({ wid
     React.createElement("path", { d: "M11.6666 5.83341C11.6666 8.746 8.43556 11.7793 7.35056 12.7162C7.24949 12.7922 7.12645 12.8333 6.99998 12.8333C6.87351 12.8333 6.75047 12.7922 6.6494 12.7162C5.5644 11.7793 2.33331 8.746 2.33331 5.83341C2.33331 4.59574 2.82498 3.40875 3.70015 2.53358C4.57532 1.65841 5.7623 1.16675 6.99998 1.16675C8.23766 1.16675 9.42464 1.65841 10.2998 2.53358C11.175 3.40875 11.6666 4.59574 11.6666 5.83341Z", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" }),
     React.createElement("path", { d: "M7 7.58325C7.9665 7.58325 8.75 6.79975 8.75 5.83325C8.75 4.86675 7.9665 4.08325 7 4.08325C6.0335 4.08325 5.25 4.86675 5.25 5.83325C5.25 6.79975 6.0335 7.58325 7 7.58325Z", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })); };
 
-var Message = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg" }, props),
+var Message = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, viewBox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M15.8346 2.5C16.4977 2.5 17.1336 2.76339 17.6024 3.23223C18.0712 3.70107 18.3346 4.33696 18.3346 5V13.3333C18.3346 13.9964 18.0712 14.6323 17.6024 15.1011C17.1336 15.5699 16.4977 15.8333 15.8346 15.8333H6.11214L3.33464 17.9167C2.64797 18.4317 1.66797 17.9417 1.66797 17.0833V5C1.66797 4.33696 1.93136 3.70107 2.4002 3.23223C2.86904 2.76339 3.50493 2.5 4.16797 2.5H15.8346ZM9.16797 10H6.66797C6.44695 10 6.23499 10.0878 6.07871 10.2441C5.92243 10.4004 5.83464 10.6123 5.83464 10.8333C5.83464 11.0543 5.92243 11.2663 6.07871 11.4226C6.23499 11.5789 6.44695 11.6667 6.66797 11.6667H9.16797C9.38898 11.6667 9.60094 11.5789 9.75722 11.4226C9.9135 11.2663 10.0013 11.0543 10.0013 10.8333C10.0013 10.6123 9.9135 10.4004 9.75722 10.2441C9.60094 10.0878 9.38898 10 9.16797 10ZM13.3346 6.66667H6.66797C6.45557 6.6669 6.25128 6.74823 6.09683 6.89404C5.94238 7.03985 5.84944 7.23913 5.83699 7.45116C5.82454 7.6632 5.89353 7.87198 6.02986 8.03486C6.16618 8.19774 6.35956 8.30241 6.57047 8.3275L6.66797 8.33333H13.3346C13.547 8.3331 13.7513 8.25177 13.9058 8.10596C14.0602 7.96015 14.1532 7.76087 14.1656 7.54884C14.1781 7.3368 14.1091 7.12802 13.9727 6.96514C13.8364 6.80226 13.643 6.69759 13.4321 6.6725L13.3346 6.66667Z" })); };
 
 var Notification = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg" }, props),
@@ -224,7 +224,7 @@ var Paperclip = function (props) { return React.createElement("svg", __assign({ 
         React.createElement("path", { d: "M12.5067 6.44576L7.14582 11.8066C6.48908 12.4633 5.59834 12.8323 4.66957 12.8323C3.74079 12.8323 2.85006 12.4633 2.19332 11.8066C1.53658 11.1499 1.16762 10.2591 1.16762 9.33034C1.16762 8.40157 1.53658 7.51084 2.19332 6.85409L7.19248 1.85493C7.63031 1.41633 8.22444 1.16962 8.84417 1.16907C9.4639 1.16852 10.0585 1.41418 10.4971 1.85201C10.9357 2.28984 11.1824 2.88397 11.1829 3.5037C11.1835 4.12343 10.9378 4.71799 10.5 5.15659L5.48915 10.1558C5.27024 10.3747 4.97333 10.4977 4.66373 10.4977C4.35414 10.4977 4.05723 10.3747 3.83832 10.1558C3.6194 9.93685 3.49642 9.63994 3.49642 9.33034C3.49642 9.02075 3.6194 8.72384 3.83832 8.50493L8.79082 3.55826", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5839" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
 var Pause = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("path", { d: "M5.25 1.75C5.40471 1.75 5.55308 1.81146 5.66248 1.92085C5.77187 2.03025 5.83333 2.17862 5.83333 2.33333V11.6667C5.83333 11.8214 5.77187 11.9697 5.66248 12.0791C5.55308 12.1885 5.40471 12.25 5.25 12.25H4.08333C3.92862 12.25 3.78025 12.1885 3.67085 12.0791C3.56146 11.9697 3.5 11.8214 3.5 11.6667V2.33333C3.5 2.17862 3.56146 2.03025 3.67085 1.92085C3.78025 1.81146 3.92862 1.75 4.08333 1.75H5.25ZM9.91667 1.75C10.0714 1.75 10.2197 1.81146 10.3291 1.92085C10.4385 2.03025 10.5 2.17862 10.5 2.33333V11.6667C10.5 11.8214 10.4385 11.9697 10.3291 12.0791C10.2197 12.1885 10.0714 12.25 9.91667 12.25H8.75C8.59529 12.25 8.44692 12.1885 8.33752 12.0791C8.22812 11.9697 8.16667 11.8214 8.16667 11.6667V2.33333C8.16667 2.17862 8.22812 2.03025 8.33752 1.92085C8.44692 1.81146 8.59529 1.75 8.75 1.75H9.91667Z" })); };
@@ -244,16 +244,16 @@ var Pencil = function (props) { return React.createElement("svg", __assign({ wid
         React.createElement("path", { d: "M8.75 2.91663L11.0833 5.24996", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2197_5880" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
 var Phone = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("g", { clipPath: "url(#clip0_2392_28279)" },
         React.createElement("path", { d: "M12.8332 9.86281V11.6128C12.8339 11.7753 12.8006 11.9361 12.7355 12.0849C12.6705 12.2338 12.575 12.3674 12.4553 12.4772C12.3356 12.5871 12.1942 12.6707 12.0403 12.7227C11.8864 12.7748 11.7234 12.7941 11.5616 12.7795C9.76656 12.5844 8.04232 11.9711 6.5274 10.9886C5.11797 10.093 3.92302 8.89808 3.0274 7.48865C2.04156 5.96685 1.42805 4.23423 1.23657 2.43115C1.22199 2.26984 1.24116 2.10726 1.29286 1.95376C1.34456 1.80027 1.42765 1.65922 1.53685 1.53959C1.64605 1.41997 1.77896 1.32439 1.92712 1.25895C2.07527 1.19351 2.23544 1.15963 2.3974 1.15948H4.1474C4.4305 1.15669 4.70495 1.25694 4.9196 1.44154C5.13425 1.62614 5.27445 1.88249 5.31407 2.16281C5.38793 2.72285 5.52492 3.27274 5.7224 3.80198C5.80089 4.01077 5.81787 4.23768 5.77135 4.45583C5.72483 4.67397 5.61674 4.87421 5.4599 5.03281L4.71907 5.77365C5.54948 7.23405 6.75867 8.44324 8.21907 9.27365L8.9599 8.53281C9.11851 8.37598 9.31874 8.26789 9.53689 8.22137C9.75504 8.17484 9.98195 8.19183 10.1907 8.27031C10.72 8.4678 11.2699 8.60478 11.8299 8.67865C12.1133 8.71862 12.3721 8.86135 12.557 9.07969C12.742 9.29802 12.8403 9.57673 12.8332 9.86281Z", strokeWidth: 1.16667, strokeLinecap: "round", strokeLinejoin: "round" })),
     React.createElement("defs", null,
         React.createElement("clipPath", { id: "clip0_2392_28279" },
-            React.createElement("rect", { width: 14, height: 14 })))); };
+            React.createElement("rect", null)))); };
 
-var Play = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
+var Play = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
     React.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M3.30691 2.77663C3.32255 2.64412 3.36891 2.5171 3.44231 2.40567C3.51571 2.29425 3.61411 2.2015 3.72968 2.13482C3.84525 2.06814 3.9748 2.02937 4.108 2.0216C4.2412 2.01382 4.37437 2.03726 4.49691 2.09004C5.11641 2.35488 6.50475 2.98429 8.26641 4.00104C10.0287 5.01838 11.2682 5.90679 11.8067 6.30988C12.2663 6.65463 12.2675 7.33829 11.8072 7.68421C11.2741 8.08496 10.0497 8.96171 8.26641 9.99188C6.48141 11.022 5.10941 11.6439 4.49575 11.9052C3.96725 12.131 3.37575 11.7885 3.30691 11.2186C3.22641 10.5525 3.07591 9.03988 3.07591 6.99704C3.07591 4.95538 3.22583 3.44338 3.30691 2.77663Z" })); };
 
 var Plus = function (props) { return React.createElement("svg", __assign({ width: props.width, height: props.height, stroke: props.color || "#ACB4BD", fill: "none", viewBox: "0 0 14 14", xmlns: "http://www.w3.org/2000/svg" }, props),
