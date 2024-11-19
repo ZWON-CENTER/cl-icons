@@ -1,4 +1,3 @@
-export { default as X } from './components/X';
 export { default as Arrowleft } from './components/Arrowleft';
 export { default as Arrowright } from './components/Arrowright';
 export { default as Calendar } from './components/Calendar';
@@ -48,5 +47,6 @@ export { default as SquarePen } from './components/SquarePen';
 export { default as Trash } from './components/Trash';
 export { default as Upload } from './components/Upload';
 export { default as VolumeLine } from './components/VolumeLine';
-export { default as Volume } from './components/Volume';
 export { default as VolumeOff } from './components/VolumeOff';
+export { default as Volume } from './components/Volume';
+export { default as X } from './components/X';

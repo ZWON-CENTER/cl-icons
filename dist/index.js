@@ -55,9 +55,6 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
     return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
 };
 
-var X = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
-    React__namespace.createElement("path", { stroke: "#ACB4BD", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.167, d: "m10.5 3.5-7 7M3.5 3.5l7 7" })); };
-
 var Arrowleft = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
     React__namespace.createElement("path", { stroke: "#ACB4BD", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.167, d: "M5.542 10.5 2.042 7l3.5-3.5M11.958 7H2.042" })); };
 
@@ -275,11 +272,14 @@ var Upload = function (props) { return React__namespace.createElement("svg", __a
 var VolumeLine = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
     React__namespace.createElement("path", { stroke: "#ACB4BD", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.167, d: "M6.417 2.743a.411.411 0 0 0-.702-.29L3.74 4.425a.82.82 0 0 1-.582.24H1.75a.583.583 0 0 0-.583.584v3.5a.583.583 0 0 0 .583.583h1.41a.82.82 0 0 1 .58.241l1.974 1.974a.41.41 0 0 0 .703-.29zM9.333 5.25a2.92 2.92 0 0 1 0 3.5M11.296 10.712a5.25 5.25 0 0 0 0-7.424" })); };
 
+var VolumeOff = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
+    React__namespace.createElement("path", { fill: "#ACB4BD", d: "m2.681 4.667 6.069 6.069v.817a.642.642 0 0 1-1.015.523L3.897 9.333H2.333a1.167 1.167 0 0 1-1.166-1.166V5.833a1.167 1.167 0 0 1 1.166-1.166zm6.069-2.22v5.478l.65.65a.58.58 0 0 1 .076-.653l.052-.052a1.165 1.165 0 0 0 .069-1.673l-.07-.067a.583.583 0 0 1 .779-.869 2.33 2.33 0 0 1 .575 2.692c-.134.3-.33.567-.575.786a.58.58 0 0 1-.66.083l.858.857a.58.58 0 0 1 .19-.505A2.9 2.9 0 0 0 11.667 7c0-.863-.375-1.64-.973-2.174a.582.582 0 1 1 .778-.87A4.08 4.08 0 0 1 12.833 7a4.07 4.07 0 0 1-1.36 3.043.58.58 0 0 1-.46.145l.937.937a.584.584 0 0 1-.825.825L2.05 2.876a.583.583 0 1 1 .825-.825l1.952 1.95 2.909-2.077a.642.642 0 0 1 1.014.522" })); };
+
 var Volume = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
     React__namespace.createElement("path", { fill: "#ACB4BD", d: "M7.735 1.925a.642.642 0 0 1 1.011.455l.004.066v9.108a.642.642 0 0 1-.958.558l-.056-.037-3.84-2.742H2.334A1.167 1.167 0 0 1 1.17 8.254l-.003-.087V5.833A1.167 1.167 0 0 1 2.246 4.67l.087-.003h1.564zm3.737 2.032A4.07 4.07 0 0 1 12.833 7a4.07 4.07 0 0 1-1.36 3.043.583.583 0 1 1-.779-.869A2.9 2.9 0 0 0 11.667 7c0-.863-.375-1.64-.973-2.174a.584.584 0 1 1 .778-.87M10.306 5.26a2.33 2.33 0 0 1 0 3.478.583.583 0 0 1-.83-.817l.052-.052a1.165 1.165 0 0 0 .069-1.673l-.07-.067a.583.583 0 1 1 .779-.869" })); };
 
-var VolumeOff = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
-    React__namespace.createElement("path", { fill: "#ACB4BD", d: "m2.681 4.667 6.069 6.069v.817a.642.642 0 0 1-1.015.523L3.897 9.333H2.333a1.167 1.167 0 0 1-1.166-1.166V5.833a1.167 1.167 0 0 1 1.166-1.166zm6.069-2.22v5.478l.65.65a.58.58 0 0 1 .076-.653l.052-.052a1.165 1.165 0 0 0 .069-1.673l-.07-.067a.583.583 0 0 1 .779-.869 2.33 2.33 0 0 1 .575 2.692c-.134.3-.33.567-.575.786a.58.58 0 0 1-.66.083l.858.857a.58.58 0 0 1 .19-.505A2.9 2.9 0 0 0 11.667 7c0-.863-.375-1.64-.973-2.174a.582.582 0 1 1 .778-.87A4.08 4.08 0 0 1 12.833 7a4.07 4.07 0 0 1-1.36 3.043.58.58 0 0 1-.46.145l.937.937a.584.584 0 0 1-.825.825L2.05 2.876a.583.583 0 1 1 .825-.825l1.952 1.95 2.909-2.077a.642.642 0 0 1 1.014.522" })); };
+var X = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
+    React__namespace.createElement("path", { stroke: "#ACB4BD", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.167, d: "m10.5 3.5-7 7M3.5 3.5l7 7" })); };
 
 exports.Arrowleft = Arrowleft;
 exports.Arrowright = Arrowright;
