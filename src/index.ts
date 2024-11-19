@@ -1,5 +1,4 @@
 export { default as X } from './components/X';
-export { default as Polygon2 } from './components/Polygon2';
 export { default as Arrowleft } from './components/Arrowleft';
 export { default as Arrowright } from './components/Arrowright';
 export { default as Calendar } from './components/Calendar';

@@ -34,9 +34,6 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
 var X = function (props) { return React.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
     React.createElement("path", { stroke: "#ACB4BD", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.167, d: "m10.5 3.5-7 7M3.5 3.5l7 7" })); };
 
-var Polygon2 = function (props) { return React.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 6 5" }, props),
-    React.createElement("path", { fill: "#ACB4BD", d: "M2.624 1.002a.49.49 0 0 1 .752 0L5.83 3.946a.49.49 0 0 1-.376.804H.546a.49.49 0 0 1-.376-.804z" })); };
-
 var Arrowleft = function (props) { return React.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
     React.createElement("path", { stroke: "#ACB4BD", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.167, d: "M5.542 10.5 2.042 7l3.5-3.5M11.958 7H2.042" })); };
 
@@ -260,4 +257,4 @@ var Volume = function (props) { return React.createElement("svg", __assign({ xml
 var Volumeoff = function (props) { return React.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
     React.createElement("path", { fill: "#ACB4BD", d: "m2.681 4.667 6.069 6.069v.817a.642.642 0 0 1-1.015.523L3.897 9.333H2.333a1.167 1.167 0 0 1-1.166-1.166V5.833a1.167 1.167 0 0 1 1.166-1.166zm6.069-2.22v5.478l.65.65a.58.58 0 0 1 .076-.653l.052-.052a1.165 1.165 0 0 0 .069-1.673l-.07-.067a.583.583 0 0 1 .779-.869 2.33 2.33 0 0 1 .575 2.692c-.134.3-.33.567-.575.786a.58.58 0 0 1-.66.083l.858.857a.58.58 0 0 1 .19-.505A2.9 2.9 0 0 0 11.667 7c0-.863-.375-1.64-.973-2.174a.582.582 0 1 1 .778-.87A4.08 4.08 0 0 1 12.833 7a4.07 4.07 0 0 1-1.36 3.043.58.58 0 0 1-.46.145l.937.937a.584.584 0 0 1-.825.825L2.05 2.876a.583.583 0 1 1 .825-.825l1.952 1.95 2.909-2.077a.642.642 0 0 1 1.014.522" })); };
 
-export { Arrowleft, Arrowright, Calendar, Chartline, Chevrondown, Chevronleft, Chevronleft12, Chevronright, Chevronright12, Chevronup, Circlehelp, Circlehelpsolid, Circleplus, Circleplussolid, Circlex, Circlexsolid, Clock, Copy, Cornerdownright, Download, Ellipsis, Ellipsisvertical, Filetext, Folder, Image, Imagesolid, Info, Infosolid, Login, Logout, Mappin, Paperclip, Pause, Pencil, Pencilline, Penline, Phone, Play, Plus, Polygon2, Polygondown, Polygonup, Replay, Search, Settings, Share, Squarepen, Trash, Upload, Volume, Volumeline, Volumeoff, X };
+export { Arrowleft, Arrowright, Calendar, Chartline, Chevrondown, Chevronleft, Chevronleft12, Chevronright, Chevronright12, Chevronup, Circlehelp, Circlehelpsolid, Circleplus, Circleplussolid, Circlex, Circlexsolid, Clock, Copy, Cornerdownright, Download, Ellipsis, Ellipsisvertical, Filetext, Folder, Image, Imagesolid, Info, Infosolid, Login, Logout, Mappin, Paperclip, Pause, Pencil, Pencilline, Penline, Phone, Play, Plus, Polygondown, Polygonup, Replay, Search, Settings, Share, Squarepen, Trash, Upload, Volume, Volumeline, Volumeoff, X };

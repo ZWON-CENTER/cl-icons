@@ -58,9 +58,6 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
 var X = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
     React__namespace.createElement("path", { stroke: "#ACB4BD", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.167, d: "m10.5 3.5-7 7M3.5 3.5l7 7" })); };
 
-var Polygon2 = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 6 5" }, props),
-    React__namespace.createElement("path", { fill: "#ACB4BD", d: "M2.624 1.002a.49.49 0 0 1 .752 0L5.83 3.946a.49.49 0 0 1-.376.804H.546a.49.49 0 0 1-.376-.804z" })); };
-
 var Arrowleft = function (props) { return React__namespace.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 14 14" }, props),
     React__namespace.createElement("path", { stroke: "#ACB4BD", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.167, d: "M5.542 10.5 2.042 7l3.5-3.5M11.958 7H2.042" })); };
 
@@ -323,7 +320,6 @@ exports.Penline = Penline;
 exports.Phone = Phone;
 exports.Play = Play;
 exports.Plus = Plus;
-exports.Polygon2 = Polygon2;
 exports.Polygondown = Polygondown;
 exports.Polygonup = Polygonup;
 exports.Replay = Replay;
