@@ -29,6 +29,8 @@ export { default as Info } from './components/Info';
 export { default as LogIn } from './components/LogIn';
 export { default as LogOut } from './components/LogOut';
 export { default as MapPin } from './components/MapPin';
+export { default as Message } from './components/Message';
+export { default as Notification } from './components/Notification';
 export { default as Paperclip } from './components/Paperclip';
 export { default as Pause } from './components/Pause';
 export { default as PenLine } from './components/PenLine';
