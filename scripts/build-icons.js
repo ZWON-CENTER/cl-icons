@@ -85,8 +85,8 @@ transform(
   { componentName },
 ).then((jsCode) => {
   jsCode = jsCode.replace(
-    /const \w+ = $$props: SVGProps<SVGSVGElement>$$/,
-    `const ${componentName} = (props: SVGProps<SVGSVGElement> & { color?: string; fill?: string })`
+    /const (\w+) = $$props: SVGProps<SVGSVGElement>$$/,
+    `const $1 = (props: SVGProps<SVGSVGElement> & { color?: string; fill?: string })`
   );
 
   if (svgCode.includes('fill-rule="evenodd"') || svgCode.includes('fillRule="evenodd"')) {
@@ -96,14 +96,13 @@ transform(
     );
 
     jsCode = jsCode.replace(
+      /<g([^>]*?)>/,
+      '<g $1 fill={props.fill || props.color || "#ACB4BD"}>'
+    );
+
+    jsCode = jsCode.replace(
       /<path([^>]*?)fill=["'][^"']*["']/g,
-      (match, attributes) => {
-        if (attributes.includes('fillRule="evenodd"') || attributes.includes('fill-rule="evenodd"')) {
-          return match.replace(/fill=["'][^"']*["']/, 'fill={props.fill || "#ACB4BD"}');
-        } else {
-          return match.replace(/fill=["'][^"']*["']/, 'fill={props.color || "#ACB4BD"}');
-        }
-      }
+      '<path$1'
     );
   } else {
     jsCode = jsCode.replace(
@@ -112,10 +111,16 @@ transform(
     );
   }
 
-  // Add width and height props to the svg element
+  // Add width and height props to the svg element with default values
   jsCode = jsCode.replace(
     /<svg/,
-    '<svg width={props.width} height={props.height}'
+    '<svg width={props.width || 24} height={props.height || 24}'
+  );
+
+  // Fix clipPath rect
+  jsCode = jsCode.replace(
+    /<rect \/>/,
+    '<rect width={14} height={14} fill="white" />'
   );
 
   // Ensure proper spacing in the export statement
