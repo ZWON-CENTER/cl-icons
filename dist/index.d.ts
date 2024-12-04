@@ -21,6 +21,7 @@ export { default as Download } from './components/Download';
 export { default as EllipsisVertical } from './components/EllipsisVertical';
 export { default as Ellipsis } from './components/Ellipsis';
 export { default as FileText } from './components/FileText';
+export { default as Filter } from './components/Filter';
 export { default as Folder } from './components/Folder';
 export { default as ImageSolid } from './components/ImageSolid';
 export { default as Image } from './components/Image';
