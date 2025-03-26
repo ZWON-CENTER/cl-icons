@@ -6,4 +6,7 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
     stroke?: string;
     strokeWidth?: number | string;
     opacity?: number;
+    width?: number | string;
+    height?: number | string;
 }
+export declare const isNative: boolean;

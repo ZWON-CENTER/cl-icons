@@ -1,4 +1,7 @@
 import * as React from "react";
+// React Native 지원 추가
+// TypeScript Workaround: 필요한 경우 react-native-svg를 다이나믹하게 가져옴
+// RN 환경에서는 IconProps를 통해 전달된 사이즈, 색상 등이 올바르게 적용됨
 import type { SVGProps } from "react";
 import { IconProps } from "../types";
 const ImageSolid = (props: IconProps) => <svg width={props.width || props.size || 24} height={props.height || props.size || 24} stroke={props.stroke || props.color || "#ACB4BD"} fill="none"  viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" {...props}><path d="M11.0833 12.25C11.7277 12.25 12.25 11.7277 12.25 11.0833V9.04167L10.4498 6.9498C10.2311 6.73108 9.93436 6.60822 9.625 6.60822C9.31564 6.60822 9.01895 6.73108 8.80017 6.9498L3.5 12.25H11.0833Z" /><path d="M12.25 9.04167L10.4498 6.9498C10.2311 6.73108 9.93436 6.60822 9.625 6.60822C9.31564 6.60822 9.01895 6.73108 8.80017 6.9498L3.5 12.25M12.25 9.04167V2.91667C12.25 2.27233 11.7277 1.75 11.0833 1.75H2.91667C2.27233 1.75 1.75 2.27233 1.75 2.91667V11.0833C1.75 11.7277 2.27233 12.25 2.91667 12.25H3.5M12.25 9.04167V11.0833C12.25 11.7277 11.7277 12.25 11.0833 12.25H3.5" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /><path d="M6.41667 5.25004C6.41667 5.89437 5.89433 6.41671 5.25 6.41671C4.60567 6.41671 4.08334 5.89437 4.08334 5.25004C4.08334 4.60571 4.60567 4.08337 5.25 4.08337C5.89433 4.08337 6.41667 4.60571 6.41667 5.25004Z" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /></svg>;

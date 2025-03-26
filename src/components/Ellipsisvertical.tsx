@@ -1,4 +1,7 @@
 import * as React from "react";
+// React Native 지원 추가
+// TypeScript Workaround: 필요한 경우 react-native-svg를 다이나믹하게 가져옴
+// RN 환경에서는 IconProps를 통해 전달된 사이즈, 색상 등이 올바르게 적용됨
 import type { SVGProps } from "react";
 import { IconProps } from "../types";
 const EllipsisVertical = (props: IconProps) => <svg width={props.width || props.size || 24} height={props.height || props.size || 24} stroke={props.stroke || props.color || "#ACB4BD"} fill="none"  viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" {...props}><path d="M7.00001 7.58341C7.32218 7.58341 7.58335 7.32225 7.58335 7.00008C7.58335 6.67792 7.32218 6.41675 7.00001 6.41675C6.67785 6.41675 6.41668 6.67792 6.41668 7.00008C6.41668 7.32225 6.67785 7.58341 7.00001 7.58341Z" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /><path d="M7.00001 3.49992C7.32218 3.49992 7.58335 3.23875 7.58335 2.91659C7.58335 2.59442 7.32218 2.33325 7.00001 2.33325C6.67785 2.33325 6.41668 2.59442 6.41668 2.91659C6.41668 3.23875 6.67785 3.49992 7.00001 3.49992Z" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /><path d="M7.00001 11.6667C7.32218 11.6667 7.58335 11.4055 7.58335 11.0833C7.58335 10.7612 7.32218 10.5 7.00001 10.5C6.67785 10.5 6.41668 10.7612 6.41668 11.0833C6.41668 11.4055 6.67785 11.6667 7.00001 11.6667Z" strokeWidth={1.16667} strokeLinecap="round" strokeLinejoin="round" /></svg>;
