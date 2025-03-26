@@ -1,4 +1,4 @@
 import * as React from "react";
-import type { SVGProps } from "react";
-declare const Pencil: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
+import { IconProps } from "../types";
+declare const Pencil: (props: IconProps) => React.JSX.Element;
 export default Pencil;

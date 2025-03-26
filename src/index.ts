@@ -53,3 +53,5 @@ export { default as VolumeLine } from './components/VolumeLine';
 export { default as VolumeOff } from './components/VolumeOff';
 export { default as Volume } from './components/Volume';
 export { default as X } from './components/X';
+
+export type { IconProps } from './types';

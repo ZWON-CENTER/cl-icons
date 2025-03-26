@@ -24,6 +24,8 @@ yarn add cl-icons
 
 ## 🚀 Usage
 
+### React
+
 Import the icons you need in your React components:
 
 ```jsx
@@ -40,12 +42,44 @@ function MyComponent() {
 }
 ```
 
+### React Native
+
+For React Native, you'll need to use [react-native-svg](https://github.com/react-native-svg/react-native-svg) to render the SVG icons:
+
+```bash
+# Install the required dependency
+npm install react-native-svg
+
+# or with yarn
+yarn add react-native-svg
+```
+
+Then import and use icons in your React Native components:
+
+```jsx
+import { ArrowLeft, Calendar, ChartLine } from "cl-icons";
+
+function MyComponent() {
+  return (
+    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+      <ArrowLeft size={24} color="#333" />
+      <Calendar size={32} color="blue" />
+      <ChartLine size={24} color="#4CAF50" />
+    </View>
+  );
+}
+```
+
 ## 🎨 Customization
 
 Each icon component accepts the following props:
 
 - `size`: number | string (default: 24)
 - `color`: string (default: "currentColor")
+- `fill`: string (for React Native)
+- `stroke`: string (for React Native)
+- `strokeWidth`: number | string (for React Native)
+- `opacity`: number (for React Native)
 
 You can also pass any valid SVG props to customize the icons further.
 

@@ -84,9 +84,16 @@ transform(
   },
   { componentName },
 ).then((jsCode) => {
+  // 인터페이스 참조를 업데이트하여 사용자 정의 IconProps 타입을 사용
   jsCode = jsCode.replace(
-    /const (\w+) = $$props: SVGProps<SVGSVGElement>$$/,
-    `const $1 = (props: SVGProps<SVGSVGElement> & { color?: string; fill?: string })`
+    /import type { SVGProps } from "react";/,
+    `import type { SVGProps } from "react";\nimport { IconProps } from "../types";`
+  );
+
+  // 컴포넌트 정의를 IconProps로 업데이트
+  jsCode = jsCode.replace(
+    /const (\w+) = (?:\(props: SVGProps<SVGSVGElement>\)|(?:\(?props))/,
+    `const $1 = (props: IconProps)`
   );
 
   if (svgCode.includes('fill-rule="evenodd"') || svgCode.includes('fillRule="evenodd"')) {
@@ -107,14 +114,20 @@ transform(
   } else {
     jsCode = jsCode.replace(
       /<svg([^>]*?)>/,
-      '<svg stroke={props.color || "#ACB4BD"} fill="none" $1>'
+      '<svg stroke={props.stroke || props.color || "#ACB4BD"} fill="none" $1>'
     );
   }
 
   // Add width and height props to the svg element with default values
   jsCode = jsCode.replace(
     /<svg/,
-    '<svg width={props.width || 24} height={props.height || 24}'
+    '<svg width={props.width || props.size || 24} height={props.height || props.size || 24}'
+  );
+
+  // strokeWidth 속성 추가
+  jsCode = jsCode.replace(
+    /<path([^>]*?)strokeWidth=["'][^"']*["']/g,
+    '<path$1strokeWidth={props.strokeWidth || 1.16667}'
   );
 
   // Fix clipPath rect
@@ -137,7 +150,10 @@ const indexContent = svgFiles
   })
   .join("\n");
 
-fs.writeFileSync(path.join(__dirname, "..", "src", "index.ts"), indexContent);
+// 타입 내보내기 추가
+const indexWithTypes = `${indexContent}\n\nexport type { IconProps } from './types';`;
+
+fs.writeFileSync(path.join(__dirname, "..", "src", "index.ts"), indexWithTypes);
 
 // Generate JSON file with icon list in dist directory
 fs.writeFileSync(jsonOutputPath, JSON.stringify({ icons: iconList }, null, 2));

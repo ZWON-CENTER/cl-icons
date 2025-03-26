@@ -1,4 +1,4 @@
 import * as React from "react";
-import type { SVGProps } from "react";
-declare const ChartLine: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
+import { IconProps } from "../types";
+declare const ChartLine: (props: IconProps) => React.JSX.Element;
 export default ChartLine;

@@ -1,6 +1,6 @@
 {
   "name": "cl-icons",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "Custom icon library with Figma integration",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -17,7 +17,8 @@
     "README.md"
   ],
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0"
+    "react": "^17.0.0 || ^18.0.0",
+    "react-native": ">=0.59.0"
   },
   "packageManager": "yarn@4.3.1+sha224.934d21773e22af4b69a7032a2d3b4cb38c1f7c019624777cc9916b23",
   "devDependencies": {
