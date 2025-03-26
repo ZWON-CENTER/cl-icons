@@ -107,7 +107,7 @@ const isNative = typeof navigator !== 'undefined' && navigator.product === 'Reac
   jsCode += `        <Svg\n`;
   jsCode += `          width={props.width || props.size || 24}\n`;
   jsCode += `          height={props.height || props.size || 24}\n`;
-  jsCode += `          viewBox="0 0 24 24"\n`;
+  jsCode += `          viewBox="0 0 14 14"\n`;
   jsCode += `          fill=${hasFillRule ? `{props.fill || props.color || "#ACB4BD"}` : `"none"`}\n`;
   jsCode += `          stroke=${!hasFillRule ? `{props.stroke || props.color || "#ACB4BD"}` : `"none"`}\n`;
   jsCode += `          strokeWidth={props.strokeWidth || 1.16667}\n`;
@@ -141,12 +141,26 @@ const isNative = typeof navigator !== 'undefined' && navigator.product === 'Reac
     jsCode += `    <svg\n`;
     jsCode += `      width={props.width || props.size || 24}\n`;
     jsCode += `      height={props.height || props.size || 24}\n`;
-    jsCode += `      viewBox="0 0 24 24"\n`;
+    jsCode += `      viewBox="0 0 14 14"\n`;
     jsCode += `      xmlns="http://www.w3.org/2000/svg"\n`;
     jsCode += `      {...props}\n`;
     jsCode += `    >\n`;
     jsCode += `      <g fill={props.fill || props.color || "#ACB4BD"}>\n`;
-    jsCode += `        ${svgContent}\n`;
+
+    // 웹 환경용 SVG 내용도 camelCase로 변환
+    const webContent = svgContent
+      .replace(/fill-rule/g, 'fillRule')
+      .replace(/clip-rule/g, 'clipRule')
+      .replace(/stroke-width/g, 'strokeWidth')
+      .replace(/stroke-linecap/g, 'strokeLinecap')
+      .replace(/stroke-linejoin/g, 'strokeLinejoin')
+      .replace(/stroke-miterlimit/g, 'strokeMiterlimit')
+      .replace(/stroke-dasharray/g, 'strokeDasharray')
+      .replace(/stroke-opacity/g, 'strokeOpacity')
+      .replace(/fill-opacity/g, 'fillOpacity')
+      .replace(/-([a-z])/g, (match, p1) => p1.toUpperCase());
+
+    jsCode += `        ${webContent}\n`;
     jsCode += `      </g>\n`;
     jsCode += `    </svg>\n`;
     jsCode += `  );\n`;
@@ -156,13 +170,27 @@ const isNative = typeof navigator !== 'undefined' && navigator.product === 'Reac
     jsCode += `    <svg\n`;
     jsCode += `      width={props.width || props.size || 24}\n`;
     jsCode += `      height={props.height || props.size || 24}\n`;
-    jsCode += `      viewBox="0 0 24 24"\n`;
+    jsCode += `      viewBox="0 0 14 14"\n`;
     jsCode += `      stroke={props.stroke || props.color || "#ACB4BD"}\n`;
     jsCode += `      fill="none"\n`;
     jsCode += `      xmlns="http://www.w3.org/2000/svg"\n`;
     jsCode += `      {...props}\n`;
     jsCode += `    >\n`;
-    jsCode += `      ${svgContent}\n`;
+
+    // 웹 환경용 SVG 내용도 camelCase로 변환
+    const webContent = svgContent
+      .replace(/fill-rule/g, 'fillRule')
+      .replace(/clip-rule/g, 'clipRule')
+      .replace(/stroke-width/g, 'strokeWidth')
+      .replace(/stroke-linecap/g, 'strokeLinecap')
+      .replace(/stroke-linejoin/g, 'strokeLinejoin')
+      .replace(/stroke-miterlimit/g, 'strokeMiterlimit')
+      .replace(/stroke-dasharray/g, 'strokeDasharray')
+      .replace(/stroke-opacity/g, 'strokeOpacity')
+      .replace(/fill-opacity/g, 'fillOpacity')
+      .replace(/-([a-z])/g, (match, p1) => p1.toUpperCase());
+
+    jsCode += `      ${webContent}\n`;
     jsCode += `    </svg>\n`;
     jsCode += `  );\n`;
   }

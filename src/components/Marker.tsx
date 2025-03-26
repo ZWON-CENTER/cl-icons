@@ -15,7 +15,7 @@ const Marker = (props: IconProps) => {
         <Svg
           width={props.width || props.size || 24}
           height={props.height || props.size || 24}
-          viewBox="0 0 24 24"
+          viewBox="0 0 14 14"
           fill="none"
           stroke={props.stroke || props.color || "#ACB4BD"}
           strokeWidth={props.strokeWidth || 1.16667}
@@ -64,15 +64,15 @@ const Marker = (props: IconProps) => {
     <svg
       width={props.width || props.size || 24}
       height={props.height || props.size || 24}
-      viewBox="0 0 24 24"
+      viewBox="0 0 14 14"
       stroke={props.stroke || props.color || "#ACB4BD"}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_2416_38881)">
+      <g clipPath="url(#clip0_2416_38881)">
 <g filter="url(#filter0_f_2416_38881)">
-<ellipse cx="11" cy="25.5" rx="3.5" ry="1.5" fill="black" fill-opacity="0.7"/>
+<ellipse cx="11" cy="25.5" rx="3.5" ry="1.5" fill="black" fillOpacity="0.7"/>
 </g>
 <g filter="url(#filter1_d_2416_38881)">
 <path d="M20 11C20 15.971 11 26 11 26C11 26 2 15.971 2 11C2 6.029 6.029 2 11 2C15.971 2 20 6.029 20 11Z" fill="#FF4B33"/>
@@ -81,13 +81,13 @@ const Marker = (props: IconProps) => {
 <path d="M11 14.5C12.933 14.5 14.5 12.933 14.5 11C14.5 9.067 12.933 7.5 11 7.5C9.067 7.5 7.5 9.067 7.5 11C7.5 12.933 9.067 14.5 11 14.5Z" fill="white"/>
 </g>
 <defs>
-<filter id="filter0_f_2416_38881" x="5.5" y="22" width="11" height="7" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_f_2416_38881" x="5.5" y="22" width="11" height="7" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur_2416_38881"/>
 </filter>
-<filter id="filter1_d_2416_38881" x="-4" y="-4" width="30" height="36" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter1_d_2416_38881" x="-4" y="-4" width="30" height="36" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset/>
 <feGaussianBlur stdDeviation="3"/>

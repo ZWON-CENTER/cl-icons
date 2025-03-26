@@ -15,7 +15,7 @@ const Reply = (props: IconProps) => {
         <Svg
           width={props.width || props.size || 24}
           height={props.height || props.size || 24}
-          viewBox="0 0 24 24"
+          viewBox="0 0 14 14"
           fill="none"
           stroke={props.stroke || props.color || "#ACB4BD"}
           strokeWidth={props.strokeWidth || 1.16667}
@@ -36,14 +36,14 @@ const Reply = (props: IconProps) => {
     <svg
       width={props.width || props.size || 24}
       height={props.height || props.size || 24}
-      viewBox="0 0 24 24"
+      viewBox="0 0 14 14"
       stroke={props.stroke || props.color || "#ACB4BD"}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d="M10 6.66406L13.3333 9.9974L10 13.3307" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2.66699 2.66406V7.33073C2.66699 8.03797 2.94794 8.71625 3.44804 9.21635C3.94814 9.71644 4.62641 9.9974 5.33366 9.9974H13.3337" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M10 6.66406L13.3333 9.9974L10 13.3307" stroke="white" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M2.66699 2.66406V7.33073C2.66699 8.03797 2.94794 8.71625 3.44804 9.21635C3.94814 9.71644 4.62641 9.9974 5.33366 9.9974H13.3337" stroke="white" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
 };

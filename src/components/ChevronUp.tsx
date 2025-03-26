@@ -15,7 +15,7 @@ const ChevronUp = (props: IconProps) => {
         <Svg
           width={props.width || props.size || 24}
           height={props.height || props.size || 24}
-          viewBox="0 0 24 24"
+          viewBox="0 0 14 14"
           fill="none"
           stroke={props.stroke || props.color || "#ACB4BD"}
           strokeWidth={props.strokeWidth || 1.16667}
@@ -35,13 +35,13 @@ const ChevronUp = (props: IconProps) => {
     <svg
       width={props.width || props.size || 24}
       height={props.height || props.size || 24}
-      viewBox="0 0 24 24"
+      viewBox="0 0 14 14"
       stroke={props.stroke || props.color || "#ACB4BD"}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d="M10.5 8.75L7 5.25L3.5 8.75" stroke="#ACB4BD" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M10.5 8.75L7 5.25L3.5 8.75" stroke="#ACB4BD" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
 };
