@@ -17,8 +17,14 @@
     "README.md"
   ],
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0",
-    "react-native": ">=0.59.0"
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0",
+    "react-native-svg": ">=12.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react-native-svg": {
+      "optional": false
+    }
   },
   "packageManager": "yarn@4.3.1+sha224.934d21773e22af4b69a7032a2d3b4cb38c1f7c019624777cc9916b23",
   "devDependencies": {

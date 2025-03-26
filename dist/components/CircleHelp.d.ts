@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { IconProps } from "../types";
-declare const CircleHelp: (props: IconProps) => React.JSX.Element;
+declare const CircleHelp: (props: IconProps) => React.JSX.Element | null;
 export default CircleHelp;

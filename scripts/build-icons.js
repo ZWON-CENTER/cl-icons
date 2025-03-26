@@ -84,68 +84,90 @@ transform(
   },
   { componentName },
 ).then((jsCode) => {
-  // 기본 타입 가져오기 추가
-  jsCode = jsCode.replace(
-    /import type { SVGProps } from "react";/,
-    `import type { SVGProps } from "react";\nimport { IconProps } from "../types";`
-  );
+  // React Native 지원 추가
+  jsCode = `import React from "react";\nimport type { SVGProps } from "react";\nimport { IconProps } from "../types";\n\n// 플랫폼 확인 (React Native인지 웹인지)
+const isNative = typeof navigator !== 'undefined' && navigator.product === 'ReactNative';\n\n`;
 
-  // 컴포넌트 정의를 IconProps로 업데이트
-  jsCode = jsCode.replace(
-    /const (\w+) = (?:\(props: SVGProps<SVGSVGElement>\)|(?:\(?props))/,
-    `const $1 = (props: IconProps)`
-  );
+  // 컴포넌트 정의를 React Native 호환되도록 수정
+  jsCode += `const ${componentName} = (props: IconProps) => {\n`;
+  jsCode += `  // React Native 환경에서는 react-native-svg를 사용\n`;
+  jsCode += `  if (isNative) {\n`;
+  jsCode += `    try {\n`;
+  jsCode += `      // 동적으로 react-native-svg 불러오기\n`;
+  jsCode += `      const { Svg, Path, G, Rect } = require('react-native-svg');\n`;
+  jsCode += `      return (\n`;
 
-  if (svgCode.includes('fill-rule="evenodd"') || svgCode.includes('fillRule="evenodd"')) {
-    jsCode = jsCode.replace(
-      /<svg([^>]*?)>/,
-      '<svg $1>'
-    );
+  // SVG 코드 추출 및 변환
+  const svgMatch = svgCode.match(/<svg[^>]*>(.*?)<\/svg>/s);
+  const svgContent = svgMatch ? svgMatch[1].trim() : "";
 
-    jsCode = jsCode.replace(
-      /<g([^>]*?)>/,
-      '<g $1 fill={props.fill || props.color || "#ACB4BD"}>'
-    );
+  // SVG 요소 제거하고 내부 내용만 사용
+  const hasFillRule = svgCode.includes('fill-rule="evenodd"') || svgCode.includes('fillRule="evenodd"');
 
-    jsCode = jsCode.replace(
-      /<path([^>]*?)fill=["'][^"']*["']/g,
-      '<path$1'
-    );
+  jsCode += `        <Svg\n`;
+  jsCode += `          width={props.width || props.size || 24}\n`;
+  jsCode += `          height={props.height || props.size || 24}\n`;
+  jsCode += `          viewBox="0 0 24 24"\n`;
+  jsCode += `          fill=${hasFillRule ? `{props.fill || props.color || "#ACB4BD"}` : `"none"`}\n`;
+  jsCode += `          stroke=${!hasFillRule ? `{props.stroke || props.color || "#ACB4BD"}` : `"none"`}\n`;
+  jsCode += `          strokeWidth={props.strokeWidth || 1.16667}\n`;
+  jsCode += `          {...props}\n`;
+  jsCode += `        >\n`;
+
+  // SVG 내용 변환 (path 태그를 Path 컴포넌트로 변환)
+  let rnContent = svgContent
+    .replace(/<path([^>]*)d="([^"]*)"([^>]*)\/>/g, '          <Path d="$2" $1 $3/>')
+    .replace(/<g([^>]*)>/g, '          <G $1>')
+    .replace(/<\/g>/g, '          </G>')
+    .replace(/<rect([^>]*)\/>/g, '          <Rect $1/>')
+    .replace(/fill="([^"]*)"/g, 'fill={props.fill || props.color || "$1"}')
+    .replace(/stroke="([^"]*)"/g, 'stroke={props.stroke || props.color || "$1"}')
+    .replace(/stroke-width="([^"]*)"/g, 'strokeWidth={props.strokeWidth || $1}')
+    .replace(/-([a-z])/g, (match, p1) => p1.toUpperCase());  // 케밥 케이스를 카멜 케이스로 변환
+
+  jsCode += `${rnContent}\n`;
+  jsCode += `        </Svg>\n`;
+  jsCode += `      );\n`;
+  jsCode += `    } catch (error) {\n`;
+  jsCode += `      console.error("Error loading react-native-svg:", error);\n`;
+  jsCode += `      return null;\n`;
+  jsCode += `    }\n`;
+  jsCode += `  }\n\n`;
+
+  // 기존 웹용 React 컴포넌트
+  if (hasFillRule) {
+    jsCode += `  // 웹 환경용 SVG\n`;
+    jsCode += `  return (\n`;
+    jsCode += `    <svg\n`;
+    jsCode += `      width={props.width || props.size || 24}\n`;
+    jsCode += `      height={props.height || props.size || 24}\n`;
+    jsCode += `      viewBox="0 0 24 24"\n`;
+    jsCode += `      xmlns="http://www.w3.org/2000/svg"\n`;
+    jsCode += `      {...props}\n`;
+    jsCode += `    >\n`;
+    jsCode += `      <g fill={props.fill || props.color || "#ACB4BD"}>\n`;
+    jsCode += `        ${svgContent}\n`;
+    jsCode += `      </g>\n`;
+    jsCode += `    </svg>\n`;
+    jsCode += `  );\n`;
   } else {
-    jsCode = jsCode.replace(
-      /<svg([^>]*?)>/,
-      '<svg stroke={props.stroke || props.color || "#ACB4BD"} fill="none" $1>'
-    );
+    jsCode += `  // 웹 환경용 SVG\n`;
+    jsCode += `  return (\n`;
+    jsCode += `    <svg\n`;
+    jsCode += `      width={props.width || props.size || 24}\n`;
+    jsCode += `      height={props.height || props.size || 24}\n`;
+    jsCode += `      viewBox="0 0 24 24"\n`;
+    jsCode += `      stroke={props.stroke || props.color || "#ACB4BD"}\n`;
+    jsCode += `      fill="none"\n`;
+    jsCode += `      xmlns="http://www.w3.org/2000/svg"\n`;
+    jsCode += `      {...props}\n`;
+    jsCode += `    >\n`;
+    jsCode += `      ${svgContent}\n`;
+    jsCode += `    </svg>\n`;
+    jsCode += `  );\n`;
   }
 
-  // Add width and height props to the svg element with default values
-  jsCode = jsCode.replace(
-    /<svg/,
-    '<svg width={props.width || props.size || 24} height={props.height || props.size || 24}'
-  );
-
-  // strokeWidth 속성 추가
-  jsCode = jsCode.replace(
-    /<path([^>]*?)strokeWidth=["'][^"']*["']/g,
-    '<path$1strokeWidth={props.strokeWidth || 1.16667}'
-  );
-
-  // Fix clipPath rect
-  jsCode = jsCode.replace(
-    /<rect \/>/,
-    '<rect width={14} height={14} fill="white" />'
-  );
-
-  // Ensure proper spacing in the export statement
-  jsCode = jsCode.replace(/export default (\w+)/, "export default $1");
-
-  // 리액트 네이티브 지원을 위한 별도의 처리
-  const reactNativeSupport = `// React Native 지원 추가
-// TypeScript Workaround: 필요한 경우 react-native-svg를 다이나믹하게 가져옴
-// RN 환경에서는 IconProps를 통해 전달된 사이즈, 색상 등이 올바르게 적용됨`;
-
-  // 주석 추가
-  jsCode = jsCode.replace("import type", `${reactNativeSupport}\nimport type`);
+  jsCode += `};\n\nexport default ${componentName};\n`;
 
   fs.writeFileSync(path.join(outputDir, `${componentName}.tsx`), jsCode);
 });
