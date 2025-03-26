@@ -35,6 +35,7 @@ export { default as LogOut } from './components/LogOut';
 export { default as MapPin } from './components/MapPin';
 export { default as Marker } from './components/Marker';
 export { default as Message } from './components/Message';
+export { default as Minus } from './components/Minus';
 export { default as Notification } from './components/Notification';
 export { default as Notification2 } from './components/Notification2';
 export { default as Paperclip } from './components/Paperclip';

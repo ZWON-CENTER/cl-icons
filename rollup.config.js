@@ -1,5 +1,12 @@
 import typescript from '@rollup/plugin-typescript';
 
+const buildCompletePlugin = {
+  name: 'build-complete',
+  closeBundle() {
+    console.log('\nBuild completed successfully! ✅');
+  }
+};
+
 export default {
   input: 'src/index.ts',
   output: [
@@ -13,7 +20,8 @@ export default {
     },
   ],
   external: ['react'],
- plugins: [
-    typescript({ tsconfig: './tsconfig.json' })
+  plugins: [
+    typescript({ tsconfig: './tsconfig.json' }),
+    buildCompletePlugin
   ]
 };
