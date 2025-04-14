@@ -1,5 +1,9 @@
 # cl-icons
 
+> ⚠️ **경고: 이 패키지는 더 이상 운영되지 않습니다.**  
+> 이 패키지는 더 이상 유지보수되지 않으며, 새로운 기능이나 버그 수정이 제공되지 않습니다.  
+> 기존 사용자는 다른 아이콘 라이브러리로의 마이그레이션을 고려해주시기 바랍니다.
+
 <div align="center">
   <img src="https://placeholder.svg?height=150&width=150" alt="cl-icons logo" width="150" />
   <h3>Conversion Lab Icon Library</h3>
